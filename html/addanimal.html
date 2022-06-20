@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adauga animal</title>
+<link rel="stylesheet" type="text/css" href="../css/addanimal.css">
+
+</head>
+<body>
+<section id="banner">
+<h1 class="pemtxt">PetSmart Manager</h1>
+<a  href="../html/login.html" type="button"  class="logout">Log out</a>
+
+<div class="intro">
+    <h1 class="bigtxt" >
+        Adauga un animal nou   
+    </h1>   
+    <img src="../images/addanimal.jpg" class="img" alt="Iubire pentru animale."> 
+</div>
+
+
+<div class="container">
+  <form method="post" action="addanimal.php" autocomplete="off" >
+
+    <label class="advtxt">
+        <p>Completeaza mai jos cu datele animalutului tau nou.</p>
+    </label>
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Nume:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="animalname" placeholder="Numele animalului..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="spec">Specie:</label>
+      </div>
+      <div class="col-75">
+        <select id="spec" name="spec" class="spec">
+          <option value="caine">caine</option>
+          <option value="pisica">pisica</option>
+          <option value="iepure">iepure</option>
+          <option value="peste">peste </option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="race">Rasa:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="race" name="race" placeholder="Rasa animalului..">
+        </div>
+      </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="birthday">Data nasterii:</label>
+        </div>
+        <div class="col-75">
+            <input type="date" id="birthday" name="birthday">
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Descriere:</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="O scurta descriere ce va aparea pe profilul animalutului" style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="media">Adauga media:</label>
+        </div>
+        <div class="col-75">
+            <input type="file" name="media" accept="image/gif, image/jpeg, image/png" >
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-75">
+            <label for="lname" class="advtxt">Vei putea completa ulterior cu informatii suplimentare,
+                 apasa submit pentru a adauga animalul nou!</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-25">
+          <button type="button"  class="button" onclick="history.back()">Go Back</button>
+            </div>
+        <div class="col-75"></div>
+       
+        <a  href="../html/profile.html" type="submit" value="Submit" class="button">Submit</a>
+        </div>
+    </div>
+    
+    
+  </form>
+</div>
+</section>
+
+</body>
+</html>

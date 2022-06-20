@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Istoric medical</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../css/istoric.css">
+
+</head>
+
+<body>
+
+    <header class="header-style">
+
+        <div class="header-container">
+
+            <h1> Pet Smart Manager </h1>
+
+            <h2> Nume utilizator: </h2>
+
+            <p> O inovatie in ingrijirea animalelor de companie </p>
+
+            <a href="../html/login.html">Log Out</a>
+
+            <button type="button" class="go-back" onclick="history.back()"> Go Back </button>
+
+        </div>
+
+    </header>
+
+    <section class="container">
+
+        <h2>Istoric medical</h2>
+
+        <article class="istoric-madical">
+
+            <button type="button" class="collapsible">Alergii si intolerante diagnosticate </button>
+
+            <div class="content">
+
+                <div class='btn js-add-btn'>
+                    Adauga alergie sau intolerante
+                </div>
+
+                <ul class='demo-list js-list'>
+                    <li class='list-item js-list-item'>
+                        item1
+                    </li>
+                </ul>
+
+            </div>
+
+            <button type="button" class="collapsible">Boli cronice diagnosticate</button>
+
+            <div class="content">
+
+                <div class='btn js-add-btn'>
+                    Adauga boli cronice
+                </div>
+
+                <ul class='demo-list js-list'>
+                    <li class='list-item js-list-item'>
+                        item1
+                    </li>
+                </ul>
+
+            </div>
+
+            <button type="button" class="collapsible">Istoric de boli/diagnostice</button>
+
+            <div class="content">
+
+                <div class='btn js-add-btn'>
+                    Adauga alte boli/diagnostice
+                </div>
+
+                <ul class='demo-list js-list'>
+
+                    <li class='list-item js-list-item'>
+                        item1
+                    </li>
+
+                </ul>
+            </div>
+
+            <button type="button" class="collapsible">Servicii medicate</button>
+
+            <div class="content">
+
+                <div class='btn js-add-btn'>
+                    Adauga servicii medicale
+                </div>
+
+                <ul class='demo-list js-list'>
+                    <li class='list-item js-list-item'>
+                        item1
+                    </li>
+
+                </ul>
+            </div>
+
+            <button type="button" class="collapsible">Imunizari</button>
+
+            <div class="content">
+                <div class='btn js-add-btn'>
+                    Adauga imunizari
+                </div>
+
+                <ul class='demo-list js-list'>
+                    <li class='list-item js-list-item'>
+                        item1
+                    </li>
+                </ul>
+
+            </div>
+
+            <button type="button" class="collapsible">Tratamente medicamentoase</button>
+
+            <div class="content">
+
+                <div class='btn js-add-btn'>
+                    Adauga tratament
+                </div>
+
+                <ul class='demo-list js-list'>
+                    <li class='list-item js-list-item'>
+                        item1
+                    </li>
+                </ul>
+
+            </div>
+
+        </article>
+
+    </section>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+    var ItemNum = 1;
+    $('.js-add-btn').on('click', function () {
+        $('.js-list').append("<li class='list-item js-list-item'>item" + (++ItemNum) + "</li>")
+    })
+
+    $('.js-list').on('click', '.js-list-item', function () {
+        $('.js-list-item').removeClass('is-active');
+        $(this).addClass('is-active');
+    })
+</script>
+
+</html>

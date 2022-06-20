@@ -1,0 +1,188 @@
+
+* { 
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+
+#banner{
+  background:linear-gradient( to right,rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+     url("../images/animals2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+div + div {
+    
+    margin-bottom: 20px;
+  }
+  
+
+body{
+    background-color: #FAEEE0;;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+ 
+}
+
+input[type=submit] {
+  background-color: #F9CF93;
+  color: black;
+  padding: 12px 20px;
+  border-color: black;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #ed9d2d;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 40px;
+  margin:40px;
+  align-items: center;
+  background-color: #DBD0C0;
+  
+}
+
+.spec{
+    background-color:  white;
+}
+
+.col-25 {
+  display: inline-block;
+  float: left;
+  flex: 0.25;
+  margin-top: 6px;
+  text-align: start;
+  text-decoration: overline;
+}
+
+.col-75 {
+  flex:0.75;
+  display: inline-block;
+  align-self: center;
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: flex;
+  width:50%;
+  clear: both;
+  align-self: center;
+
+}
+.advtxt{
+    font-style: oblique;
+    color: rgb(98, 37, 37) ;
+}
+.button{
+    background-color: #F9CF93;
+  color: black;
+  padding: 12px 20px;
+  border-color: black;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  float: right;
+}
+.logout{
+  background-color: #F9CF93;
+  color: black;
+  padding: 5px 16px;
+  border-color: black;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+float: right;
+}
+.img{
+    float: right;
+  border: none;
+  margin: 0px 0px 15px 20px;
+}
+.intro{
+    content: "";
+  display: flex;
+  clear: both;
+  
+}
+.pemtxt{
+    text-align: left;
+    font-size: 25px;
+    color:  #c1a0b1;
+    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: black;
+    
+}
+.bigtxt{
+    text-align: center;
+    align-self: center;
+    font-size: 35px;
+    width: 100%;
+    float: left;  
+    color: #5f3d55;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 90%;
+    margin-top: 0;
+  }
+  .container {  
+    padding: 10px;
+    margin:10px;  
+  }
+  .img{
+  width: 200px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .img{
+    width: 180px;
+    }
+  .pemtxt{
+    font-size: 20px;
+  }
+  .bigtxt{
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .img{
+    width: 160px;
+    }
+  .pemtxt{
+    font-size: 18px;
+  }
+  .bigtxt{
+    font-size: 23px;
+  }
+  .logout{
+    padding: 4px 10px;
+  }
+}

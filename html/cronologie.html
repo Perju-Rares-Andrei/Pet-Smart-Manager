@@ -1,0 +1,159 @@
+<!Doctype html>
+<html lang="">
+
+    <head>
+
+        <title> Cronologie </title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+
+        <link rel="stylesheet" type="text/css" href="../css/cronologie.css">
+
+    </head>
+
+    <body>
+
+        <header class="header-style">
+            <div class="header-container">
+
+                <h1> Pet Smart Manager </h1>
+
+                <h2> Nume utilizator: </h2>
+
+                <p> O inovatie in ingrijirea animalelor de companie </p>
+
+                <a href="../html/login.html" >Log Out</a>
+
+                <button type="button"  class="go-back" onclick="history.back()"> Go Back </button>
+
+            </div>
+
+        </header>
+
+        <main class="main-style">
+
+            <section class="timeline-section">
+
+                <header>
+
+                    <h1>Timeline</h1>
+
+                </header>
+
+                <article>
+
+                    <div class="timeline">
+
+                        <div class="container left">
+
+                          <div class="timeline-content">
+                            <h2>2022 Matrie 25</h2>
+                            <p>Control medical</p>
+                          </div>
+
+                        </div>
+
+                        <div class="container right">
+
+                          <div class="timeline-content">
+                            <h2>2021 Noiembrie 07</h2>
+                            <p>Tratament</p>
+                          </div>
+
+                        </div>
+
+                        <div class="container left">
+
+                          <div class="timeline-content">
+                            <h2>2020 Septembrie 28</h2>
+                            <p>Interventie cirugicala</p>
+                          </div>
+
+                        </div>
+
+                        <div class="container right">
+
+                          <div class="timeline-content">
+                            <h2>2019 Octombrie 06</h2>
+                            <p>Vaccin de rutina</p>
+                          </div>
+
+                        </div>
+
+                        <div class="container left">
+
+                          <div class="timeline-content">
+                            <h2>2018 Februarie 3</h2>
+                            <p>Contol medical</p>
+                          </div>
+
+                        </div>
+
+                        <div class="container right">
+
+                          <div class="timeline-content">
+                            <h2>2017 August 24</h2>
+                            <p>Vaccin si control medical</p>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                </article>
+
+            </section>
+
+            <aside class="add-event-section">
+
+                <header>
+
+                    <h1>Adauga eveniment</h1>
+
+                </header>
+
+                <article>
+
+                    <button class="add-event-button">ADD</button>
+
+                    <div class="content">
+
+                        <label for="date" >Data : <input id="date" type="date" ></label> 
+                        
+                        <label for="event">Eveniment : <input id="event" type="text"  placeholder="Eveniment.."></label>
+
+                        <label for="description">Descriere : </label> 
+                        <textarea id="description" name="description" placeholder="  Descrierea evenimentului.." style="margin-left: 20px;  margin-right:20px;  margin-bottom:20px;  min-height:100px; min-width: 300px; border-color: gainsboro; border-radius: 10px; width: 90%;"></textarea>
+
+                        <button class="submit-button">Submit</button>
+
+                    </div>
+
+                </article>
+
+            </aside>
+
+        </main>
+
+    </body>
+    
+    
+<script>
+    var coll = document.getElementsByClassName("add-event-button");
+    var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+
+</html>
+

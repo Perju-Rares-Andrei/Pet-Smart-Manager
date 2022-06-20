@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Istoric medical</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="../css/sfaturi.css">
+
+</head>
+
+<body>
+
+  <header class="header-style">
+
+    <div class="header-container">
+
+      <h1> Pet Smart Manager </h1>
+
+      <h2> Nume utilizator: </h2>
+
+      <p> O inovatie in ingrijirea animalelor de companie </p>
+
+      <a href="../html/login.html">Log Out</a>
+
+      <button type="button" class="go-back" onclick="history.back()"> Go Back </button>
+
+    </div>
+
+  </header>
+
+  <section class="container">
+
+    <h2>Sfaturi in functie de varsta</h2>
+
+    <article class="sfaturi-madicale">
+
+      <button type="button" class="collapsible">Junior 0-5 saptamani</button>
+      <div class="content">
+        <p>În primele cinci săptămâni, cățeii primesc doar lapte de la mamă, lapte care le oferă tot ce le este necesar.
+          Din a cincea săptămână, încep să mănânce boabe de hrană uscată înmuiate sau hrană umedă de la mamă. Porția de
+          hrană solidă crește pas cu pas în decursul următoarelor zile. În același timp, mama nu îi mai alăptează la fel
+          de mult. Când au nouă săptămâni, ei sunt complet înțărcați. Hrana de calitate bună este importantă încă din
+          aceste prime săptămâni de viață, ca un supliment la laptele mamei. Poți alege hrană special concepută pentru
+          mamă și cățeii ei.</p>
+
+        <p>În timp ce cresc, patrupezii au nevoie de mai multe calorii sub formă de grăsimi și proteine brute. O
+          combinație echilibrată de vitamine și minerale este benefică pentru dezvoltarea întregului aparat locomotor.
+          În această etapă, alege hrana specială pentru câini juniori. O hrană echilibrată este foarte importantă mai
+          ales pentru câinii din rasele de talie mare, cum ar fi Saint Bernard sau Marele Danez. Pentru că, dacă primesc
+          prea multe proteine, cresc prea repede, iar acest lucru poate afecta articulațiile. Stăpânii care au căței din
+          rase mari pot discuta cu veterinarul sau crescătorul despre dezvoltarea optimă a greutății câinelui.</p>
+
+        <p>Eticheta de pe pachet îți oferă indicații bune despre cantitatea zilnică de hrană. Însă forma corpului și
+          activitatea fiecărui câine sunt diferite. Poți cântări câinele regulat, pentru a compara greutatea ideală cu
+          realitatea. Acest lucru îți permite să intervii la timp, dacă e cazul, și să schimbi tipul de hrană sau să
+          reduci porțiile.</p>
+      </div>
+
+      <button type="button" class="collapsible">Adult 6 luni - 10 ani</button>
+      <div class="content">
+
+        <p>Câinii de talie mică pot face schimbarea la hrană pentru câini adulți pas cu pas, începând cu vârsta de șase
+          luni. Câinii de talie medie ar trebui să facă schimbarea la vârsta de un an. Câinii de talie mare și foarte
+          mare primesc hrană pentru pui și juniori până la vârsta de doi ani.</p>
+
+        <p>Dacă îi dai hrană uscată, poți face tranziția foarte simplu: amestecă boabele din hrana nouă pentru adulți în
+          hrana cunoscută pentru pui timp de o perioadă mai lungă de timp. Astfel poți vedea dacă patrupedul tău
+          tolerează bine viitorul său tip de hrană și poți evita reacțiile de hipersensibilitate.</p>
+
+      </div>
+
+      <button type="button" class="collapsible">Senior 10-12 ani</button>
+      <div class="content">
+
+        <p>De când este un câine „senior“? Și aici depinde de mărimea patrupedului. Câinii de talie mică au o medie de
+          viață mai mare și de aceea îmbătrânesc mai târziu. Câinii de talie mare îmbătrânesc mult mai repede. Practic,
+          un câine este clasificat ca senior atunci când a ajuns la trei sferturi din media sa de viață. La Golden
+          Retriever acest lucru ar avea loc pe la șapte – opt ani. În schimb, micuțul Chihuahua nu este considerat
+          senior până la zece – doisprezece ani. Ca stăpân, tu poți să îți dai seama cel mai bine.</p>
+
+        <p>Dacă observi primele semne de îmbătrânire – câinele pare mai încet, se ridică mai greu sau are probleme
+          digestive – e timpul pentru o vizită la veterinar. Așa poți preveni apariția unor boli mai grave sau a
+          problemelor dentare. Hrănirea câinilor cu produse dedicate seniorilor poate începe la primele semne de
+          îmbătrânire.</p>
+
+      </div>
+
+    </article>
+
+  </section>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  var ItemNum = 1;
+  $('.js-add-btn').on('click', function () {
+    $('.js-list').append("<li class='list-item js-list-item'>item" + (++ItemNum) + "</li>")
+  })
+
+  $('.js-list').on('click', '.js-list-item', function () {
+    $('.js-list-item').removeClass('is-active');
+    $(this).addClass('is-active');
+  })
+</script>
+
+</html>
